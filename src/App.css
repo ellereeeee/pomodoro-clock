@@ -30,3 +30,15 @@
 }
 
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+
+.topright {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+}
+
+.topleft {
+  position: absolute;
+  top: .5em;
+  left: .5em;
+}
