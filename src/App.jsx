@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App"> 
         <i class="material-icons md-light topleft">info_outline</i>
-        <i class="material-icons md-light topright">alarm</i>
+        <i class="material-icons md-light topright">history</i>
       </div>
     );
   }
