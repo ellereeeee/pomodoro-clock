@@ -38,8 +38,6 @@
   font-feature-settings: 'liga';
 }
 
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-
 .topright {
   position: absolute;
   top: .5em;
