@@ -15,8 +15,8 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
-        <i class="material-icons md-light topleft">info_outline</i>
-        <i class="material-icons md-light topright">history</i>
+        <i class="material-icons topleft">info_outline</i>
+        <i class="material-icons topright">history</i>
         <div className="flex-container">
           <TaskInput />
         </div>
