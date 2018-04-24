@@ -46,3 +46,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/*
+  ========================================
+  Custom Styles
+  ========================================
+*/
+
+body {
+  font-family: 'Lato', sans-serif;
+}
