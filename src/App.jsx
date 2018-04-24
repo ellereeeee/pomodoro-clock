@@ -11,6 +11,21 @@ class TaskInput extends Component {
   }
 }
 
+class Timer extends Component {
+  render() {
+    return (
+      <div>
+        <div className="circle flex-container">
+          <i class="material-icons">arrow_drop_up</i>
+          <p>25:00:00</p> {/*Timer placeholder*/}
+          
+        </div>
+        <i className="material-icons play-arrow">play_arrow</i>
+      </div>
+    );
+  }
+}
+
 class App extends Component {
   render() {
     return (
@@ -19,6 +34,7 @@ class App extends Component {
         <i class="material-icons topright">history</i>
         <div className="flex-container">
           <TaskInput />
+          <Timer />
         </div>
       </div>
     );
