@@ -18,7 +18,7 @@ class App extends Component {
         <i class="material-icons md-light topleft">info_outline</i>
         <i class="material-icons md-light topright">history</i>
         <div className="flex-container">
-          <TaskInput className="input" />
+          <TaskInput />
         </div>
       </div>
     );
