@@ -1,6 +1,7 @@
 .App {
   background: linear-gradient(#FAC368, #EB6C52); 
   border: 0;
+  color: #FFF;
   height: 100vh;
 }
 
@@ -49,4 +50,17 @@
   position: absolute;
   top: .5em;
   left: .5em;
+}
+
+input {
+  background: transparent;
+  border: none;
+  color: #FFF;
+  font-family: inherit;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+input::placeholder {
+  opacity: 1;
 }
