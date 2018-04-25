@@ -18,7 +18,7 @@ class Timer extends Component {
         <div className="circle flex-container">
           <i class="material-icons">arrow_drop_up</i>
           <p>25:00:00</p> {/*Timer placeholder*/}
-          
+          <i class="material-icons">arrow_drop_down</i>
         </div>
         <i className="material-icons play-arrow">play_arrow</i>
       </div>
