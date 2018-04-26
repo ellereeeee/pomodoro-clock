@@ -56,3 +56,23 @@ table {
 body {
   font-family: 'Lato', sans-serif;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/*
+  ========================================
+  Media Queries
+  ========================================
+*/ 
+
+@media screen and (min-width: 1000px) {
+  body {
+    align-items: center;
+    background-color: #57EFB8;
+    display: flex;
+    justify-content: center;
+  }
+}

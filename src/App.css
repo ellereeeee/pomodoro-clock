@@ -3,6 +3,7 @@
   border: 0;
   color: #FFF;
   height: 100vh;
+  position: relative;
 }
 
 .flex-container {
@@ -85,4 +86,17 @@ input::placeholder {
   font-size: 3.5em;
   margin-top: .75em;
   text-align: center;
+}
+
+/*
+  ========================================
+  Media Queries
+  ========================================
+*/ 
+
+@media screen and (min-width: 1000px) {
+  .App {
+    height: 80vh;
+    width: 17em;
+  }
 }
