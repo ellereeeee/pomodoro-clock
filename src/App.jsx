@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Info from './Info'
 
 class TaskInput extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
+        <Info />
         <i class="material-icons topleft">info_outline</i>
         <i class="material-icons topright">history</i>
         <div className="flex-container">
