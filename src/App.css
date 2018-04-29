@@ -100,3 +100,10 @@ input::placeholder {
     width: 17em;
   }
 }
+
+@media screen and (min-width: 1400px) {
+  .App {
+    height: 55vh;
+    width: 17em;
+  }
+}
