@@ -17,9 +17,9 @@ class Timer extends Component {
     return (
       <div>
         <div className="circle flex-container">
-          <i class="material-icons">arrow_drop_up</i>
+          <i className="material-icons">arrow_drop_up</i>
           <p>25:00:00</p> {/*Timer placeholder*/}
-          <i class="material-icons">arrow_drop_down</i>
+          <i className="material-icons">arrow_drop_down</i>
         </div>
         <i className="material-icons play-arrow">play_arrow</i>
       </div>
@@ -32,8 +32,8 @@ class App extends Component {
     return (
       <div className="App"> 
         <Info />
-        <i class="material-icons topleft">info_outline</i>
-        <i class="material-icons topright">history</i>
+        <i className="material-icons topleft">info_outline</i>
+        <i className="material-icons topright">history</i>
         <div className="flex-container">
           <TaskInput />
           <Timer />
