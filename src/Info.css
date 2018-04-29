@@ -1,20 +1,33 @@
 .info {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1;
+  border-radius: 1.5em;
+  position: fixed;
+  width: 95%;
+  height: 97%;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /*
   ========================================
   Media Queries
   ========================================
-*/ 
+*/
 
 @media screen and (min-width: 1000px) {
   .info {
-    height: 80vh;
-    width: 17em;
+    height: 77.6vh;
+    width: 16.15em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .info {
+    height: 53.35vh;
+    width: 16.15em;
   }
 }
