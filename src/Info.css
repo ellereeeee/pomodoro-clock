@@ -10,6 +10,36 @@
   bottom: 0;
   left: 0;
   z-index: 1;
+  padding: 3em 1em 1em 1em;
+}
+
+.info .topright {
+  font-size: 1.5em;
+}
+
+.info p {
+  line-height: 24px;
+}
+
+.info h3 {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.info div {
+  margin-bottom: .5em;
+}
+
+.info i {
+  margin-right: .3em;
+}
+
+.info a {
+  color: #FFF;
+}
+
+.same-line {
+  display: inline-block;
 }
 
 /*
