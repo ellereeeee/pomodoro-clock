@@ -9,13 +9,13 @@
 .topright {
   position: absolute;
   top: .5em;
-  right: .5em;
+  right: .7em;
 }
 
 .topleft {
   position: absolute;
   top: .5em;
-  left: .5em;
+  left: .7em;
 }
 
 input {

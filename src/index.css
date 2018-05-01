@@ -78,6 +78,15 @@ table {
   font-feature-settings: 'liga';
 }
 
+button {
+  /* For button elements. */
+  background: transparent;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  padding: 0;
+}
+
 /*
   ========================================
   Custom Styles
