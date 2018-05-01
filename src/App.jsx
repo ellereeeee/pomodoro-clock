@@ -31,9 +31,8 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
-        <Info />
-        <i className="material-icons topleft">info_outline</i>
-        <i className="material-icons topright">history</i>
+        <button className="material-icons topleft"><i>info_outline</i></button>
+        <button className="material-icons topright"><i>history</i></button>
         <div className="flex-container">
           <TaskInput />
           <Timer />
