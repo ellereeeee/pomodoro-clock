@@ -23,7 +23,7 @@ class Info extends Component {
         <div>
           <i className="material-icons">history</i><p className="same-line">view pomodoro history</p>
         </div>
-        <p>Check <a href="https://francescocirillo.com/pages/pomodoro-technique" target="_blank">here</a> for more info on the Pomodoro Technique.</p>
+        <p className="link">Check <a href="https://francescocirillo.com/pages/pomodoro-technique" target="_blank">here</a> for more info on the Pomodoro Technique.</p>
       </div>
     );
   }
