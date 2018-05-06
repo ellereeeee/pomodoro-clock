@@ -5,7 +5,7 @@ class Info extends Component {
   render() {
     return (
       <div className={this.props.visibility ? "info show" : "info"}>
-        <i class="material-icons topright">close</i>
+        <button className="material-icons topright" onClick={this.props.toggle}><i>close</i></button>
         <p>This is a Pomodoro Clock application. It utilizes a time management method to break work into intervals separated by short breaks. After four work intervals are finished, take a longer break and repeat.</p>
         <h3>Buttons:</h3>
         <div>
