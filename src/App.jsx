@@ -37,6 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
+        <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft"><i>info_outline</i></button>
         <button className="material-icons topright"><i>history</i></button>
         <div className="flex-container">
