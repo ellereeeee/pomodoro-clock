@@ -28,6 +28,7 @@ class Timer extends Component {
 }
 
 class App extends Component {
+  state = { toggleInfo: false};
   render() {
     return (
       <div className="App"> 
