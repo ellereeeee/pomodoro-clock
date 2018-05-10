@@ -1,4 +1,4 @@
-.App {
+.PomodoroTimer {
   background: linear-gradient(#FAC368, #EB6C52); 
   border: 0;
   color: #FFF;
@@ -62,14 +62,14 @@ input::placeholder {
 */ 
 
 @media screen and (min-width: 1000px) {
-  .App {
+  .PomodoroTimer {
     height: 80vh;
     width: 17em;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .App {
+  .PomodoroTimer {
     height: 55vh;
     width: 17em;
   }
