@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './PomodoroTimer.css';
 import Info from './Info'
+import { Link } from 'react-router-dom';
 
 class TaskInput extends Component {
   render() {
@@ -39,7 +40,7 @@ class PomodoroTimer extends Component {
       <div className="PomodoroTimer"> 
         <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
-        <button className="material-icons topright"><i>history</i></button>
+        <i className="material-icons topright"><Link to="/history">history</Link></i>
         <div className="flex-container">
           <TaskInput />
           <Timer />
