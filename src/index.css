@@ -118,6 +118,11 @@ html, body {
   justify-content: center;
 }
 
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
 /*
   ========================================
   Media Queries
