@@ -123,6 +123,18 @@ a {
   text-decoration: none;
 }
 
+.topright {
+  position: absolute;
+  top: .5em;
+  right: .7em;
+}
+
+.topleft {
+  position: absolute;
+  top: .5em;
+  left: .7em;
+}
+
 /*
   ========================================
   Media Queries
