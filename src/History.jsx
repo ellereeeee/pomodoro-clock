@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './History.css';
+import { Link } from 'react-router-dom';
 
 class TaskItem extends Component {
   render () {
@@ -18,7 +19,7 @@ class History extends Component {
       <div className="History">
         <div className="test">
           <h3 className="topleft">History</h3>
-          <i className="material-icons topright">arrow_back</i>
+          <i className="material-icons topright"><Link to="/">arrow_back</Link></i>
         </div>
         <div className="History-flex-container">
           <TaskItem />
