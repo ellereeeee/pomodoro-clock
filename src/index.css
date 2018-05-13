@@ -126,13 +126,13 @@ a {
 .topright {
   position: absolute;
   top: .5em;
-  right: .7em;
+  right: .5em;
 }
 
 .topleft {
   position: absolute;
   top: .5em;
-  left: .7em;
+  left: .5em;
 }
 
 /*
