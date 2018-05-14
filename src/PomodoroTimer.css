@@ -6,18 +6,21 @@
   position: relative;
 }
 
-input {
-  background: transparent;
-  border: none;
-  color: #FFF;
-  font-family: inherit;
+/*
+  ========================================
+  Message Styles
+  ========================================
+*/
+
+.message {
   font-size: 1.2em;
-  text-align: center;
 }
 
-input::placeholder {
-  opacity: 1;
-}
+/*
+  ========================================
+  Timer Styles
+  ========================================
+*/
 
 .circle {
   border: .15em solid white;

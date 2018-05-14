@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import './PomodoroTimer.css';
 import Info from './Info'
 
-class TaskInput extends Component {
+class Message extends Component {
   render() {
     return (
-      <form>
-        <input  className="input" placeholder="Enter task..." type ="text"  />
-      </form>
+      <h3 className="message">Focus...</h3>
     );
   }
 }
@@ -40,7 +38,7 @@ class PomodoroTimer extends Component {
         <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
         <div className="flex-container">
-          <TaskInput />
+          <Message />
           <Timer />
         </div>
       </div>
