@@ -39,7 +39,6 @@ class PomodoroTimer extends Component {
       <div className="PomodoroTimer"> 
         <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
-        <i className="material-icons topright">history</i>
         <div className="flex-container">
           <TaskInput />
           <Timer />
