@@ -14,13 +14,13 @@ class Timer extends Component {
   state = { timerActive: false, time: 25 };
   render() {
     return (
-      <div>
+      <div className="timer-flex-container">
         <div className="circle flex-container">
           <i className="material-icons">arrow_drop_up</i>
           <p>25:00:00</p> {/*Timer placeholder*/}
           <i className="material-icons">arrow_drop_down</i>
         </div>
-        <i className="material-icons play-arrow">play_arrow</i>
+        <button><i className="material-icons play-arrow">play_arrow</i></button>
       </div>
     );
   }

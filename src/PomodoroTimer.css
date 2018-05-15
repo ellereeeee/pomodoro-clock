@@ -46,6 +46,14 @@
   text-align: center;
 }
 
+/* No height: 100% to properly space Message ;*/
+.timer-flex-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /*
   ========================================
   Media Queries
