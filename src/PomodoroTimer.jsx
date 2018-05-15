@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import './PomodoroTimer.css';
 import Info from './Info'
 
-class Message extends Component {
-  render() {
-    return (
-      <h3 className="message">Focus...</h3>
-    );
-  }
-}
-
 class Timer extends Component {
   state = { timerActive: false, time: 25 };
   render() {
@@ -34,12 +26,13 @@ class PomodoroTimer extends Component {
       : this.setState({ toggleInfo: false });
   };
   render() {
+    const Message = <h3 className="message">Focus...</h3>
     return (
       <div className="PomodoroTimer"> 
         <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
         <div className="flex-container">
-          <Message />
+          {Message}
           <Timer />
         </div>
       </div>
