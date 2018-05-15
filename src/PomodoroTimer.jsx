@@ -11,6 +11,7 @@ class Message extends Component {
 }
 
 class Timer extends Component {
+  state = { timerActive: false, time: 25 };
   render() {
     return (
       <div>
