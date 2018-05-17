@@ -4,6 +4,12 @@ import Info from './Info'
 
 class Timer extends Component {
   state = { timerActive: false, time: 1500000 };
+  handleIncrementTime = () => {
+    this.setState({ state: (this.state.time += 300000) });
+  };
+  handleDecrementTime = () => {
+    this.setState({ time: (this.state.time -= 300000) });
+  };
   render() {
     return (
       <div className="timer-flex-container">
