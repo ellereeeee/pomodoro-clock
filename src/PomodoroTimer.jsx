@@ -8,7 +8,9 @@ class Timer extends Component {
     this.setState({ state: (this.state.time += 300000) });
   };
   handleDecrementTime = () => {
-    this.setState({ time: (this.state.time -= 300000) });
+    if (this.state.time > 300000) {
+      this.setState({ time: (this.state.time -= 300000) });
+    }
   };
   handleStartTimer = () => {
     this.initialStateTime = this.state.time;
