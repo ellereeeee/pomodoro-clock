@@ -19,6 +19,10 @@ class Timer extends Component {
     }, 10);
     this.setState({ timerActive: true });
   };
+  handleResetTimer = () => {
+    clearInterval(this.timer);
+    this.setState({ time: this.initialStateTime, timerActive: false });
+  };
   render() {
     return (
       <div className="timer-flex-container">
