@@ -33,12 +33,14 @@ class Timer extends Component {
         {!this.state.timerActive ? (
           <button
             className="material-icons play-reset"
+            onClick={this.handleStartTimer}
           >
             <i>play_arrow</i>
           </button>
         ) : (
           <button
             className="material-icons play-reset"
+            onClick={this.handleResetTimer}
           >
             <i>close</i>
           </button>
