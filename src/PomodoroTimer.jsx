@@ -3,7 +3,7 @@ import './PomodoroTimer.css';
 import Info from './Info'
 
 class Timer extends Component {
-  state = { timerActive: false, time: 25 };
+  state = { timerActive: false, time: 1500000 };
   render() {
     return (
       <div className="timer-flex-container">
