@@ -30,7 +30,19 @@ class Timer extends Component {
             ""
           )}
         </div>
-        <button><i className="material-icons play-arrow">play_arrow</i></button>
+        {!this.state.timerActive ? (
+          <button
+            className="material-icons play-reset"
+          >
+            <i>play_arrow</i>
+          </button>
+        ) : (
+          <button
+            className="material-icons play-reset"
+          >
+            <i>close</i>
+          </button>
+        )}
       </div>
     );
   }
