@@ -10,6 +10,15 @@ class Timer extends Component {
   handleDecrementTime = () => {
     this.setState({ time: (this.state.time -= 300000) });
   };
+  handleStartTimer = () => {
+    this.initialStateTime = this.state.time;
+    const startTime = Date.now();
+    this.timer = setInterval(() => {
+      const lapsedTime = Date.now() - startTime;
+      this.setState({ time: this.initialStateTime - lapsedTime });
+    }, 10);
+    this.setState({ timerActive: true });
+  };
   render() {
     return (
       <div className="timer-flex-container">
