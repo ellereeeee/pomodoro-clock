@@ -24,6 +24,8 @@ class Timer extends Component {
     this.setState({ time: this.initialStateTime, timerActive: false });
   };
   render() {
+    const minutes = Math.floor(this.state.time / 1000 / 60);
+    const seconds = Math.floor((this.state.time / 1000) % 60);    
     return (
       <div className="timer-flex-container">
         <div className="circle flex-container">
@@ -34,7 +36,7 @@ class Timer extends Component {
           ) : (
             ""
           )}
-          <p>25:00:00</p> {/*Timer placeholder*/}
+          <p>{minutes}:{seconds === 0 ? "00" : seconds}</p>
           {!this.state.timerActive ? (
             <button onClick={this.handleDecrementTime}>
               <i className="material-icons">arrow_drop_down</i>
