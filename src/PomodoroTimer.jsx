@@ -18,6 +18,9 @@ class Timer extends Component {
     this.timer = setInterval(() => {
       const lapsedTime = Date.now() - startTime;
       this.setState({ time: this.initialStateTime - lapsedTime });
+      if (this.state.time < 10) {
+        clearInterval(this.timer);
+      };
     }, 10);
     this.setState({ timerActive: true });
   };
