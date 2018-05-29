@@ -16,11 +16,12 @@ class Timer extends Component {
     this.initialStateTime = this.state.time;
     const startTime = Date.now();
     this.timer = setInterval(() => {
-      const lapsedTime = Date.now() - startTime;
-      this.setState({ time: this.initialStateTime - lapsedTime });
       if (this.state.time < 10) {
         clearInterval(this.timer);
-      };
+      } else {
+        const lapsedTime = Date.now() - startTime;
+        this.setState({ time: this.initialStateTime - lapsedTime });
+      }
     }, 10);
     this.setState({ timerActive: true });
   };
