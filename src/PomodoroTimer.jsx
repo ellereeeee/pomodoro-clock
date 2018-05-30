@@ -3,7 +3,6 @@ import './PomodoroTimer.css';
 import Info from './Info'
 
 class Timer extends Component {
-  state = { timerActive: false, time: 1500000 };
   handleIncrementTime = () => {
     this.setState({ state: (this.state.time += 300000) });
   };
@@ -77,7 +76,7 @@ class Timer extends Component {
 }
 
 class PomodoroTimer extends Component {
-  state = { toggleInfo: false};
+  state = { toggleInfo: false, timerActive: false, time: 1500000 };
   handleToggleInfo = () => {
     !this.state.toggleInfo
       ? this.setState({ toggleInfo: true })
