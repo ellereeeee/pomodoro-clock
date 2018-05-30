@@ -4,14 +4,14 @@ import Info from './Info'
 
 class Timer extends Component {
   render() {
-    const hours = Math.floor(this.state.time / 1000 / 60 / 60);
-    const minutes = Math.floor((this.state.time / 1000 / 60) % 60);
-    const seconds = Math.floor((this.state.time / 1000) % 60);
+    const hours = Math.floor(this.props.time / 1000 / 60 / 60);
+    const minutes = Math.floor((this.props.time / 1000 / 60) % 60);
+    const seconds = Math.floor((this.props.time / 1000) % 60);
     return (
       <div className="timer-flex-container">
         <div className="circle flex-container">
-          {!this.state.timerActive ? (
-            <button onClick={this.handleIncrementTime}>
+          {!this.props.timerActive ? (
+            <button onClick={this.props.handleIncrementTime}>
               <i className="material-icons">arrow_drop_up</i>
             </button>
           ) : (
@@ -22,25 +22,25 @@ class Timer extends Component {
             {minutes === 0 ? "00" : minutes < 10 ? "0" + minutes : minutes}:
             {seconds === 0 ? "00" : seconds < 10 ? "0" + seconds : seconds}
           </p>
-          {!this.state.timerActive ? (
-            <button onClick={this.handleDecrementTime}>
+          {!this.props.timerActive ? (
+            <button onClick={this.props.handleDecrementTime}>
               <i className="material-icons">arrow_drop_down</i>
             </button>
           ) : (
             ""
           )}
         </div>
-        {!this.state.timerActive ? (
+        {!this.props.timerActive ? (
           <button
             className="material-icons play-reset"
-            onClick={this.handleStartTimer}
+            onClick={this.props.handleStartTimer}
           >
             <i>play_arrow</i>
           </button>
         ) : (
           <button
             className="material-icons play-reset"
-            onClick={this.handleResetTimer}
+            onClick={this.props.handleResetTimer}
           >
             <i>close</i>
           </button>
@@ -90,7 +90,14 @@ class PomodoroTimer extends Component {
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
         <div className="flex-container">
           {Message}
-          <Timer />
+          <Timer 
+            timerActive={this.state.timerActive}
+            time={this.state.time}
+            handleIncrementTime={this.handleIncrementTime}
+            handleDecrementTime={this.handleDecrementTime}    
+            handleStartTimer={this.handleStartTimer}
+            handleResetTimer={this.handleResetTimer}        
+          />
         </div>
       </div>
     );
