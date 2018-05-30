@@ -66,7 +66,6 @@ class PomodoroTimer extends Component {
     this.timer = setInterval(() => {
       if (this.state.time < 10) {
         clearInterval(this.timer);
-        (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest" }) : this.setState({ timerType: "Pomodoro" });
       } else {
         const lapsedTime = Date.now() - startTime;
         this.setState({ time: this.initialStateTime - lapsedTime });
@@ -76,7 +75,12 @@ class PomodoroTimer extends Component {
   };
   handleResetTimer = () => {
     clearInterval(this.timer);
-    this.setState({ time: this.initialStateTime, timerActive: false });
+    this.setState({ timerActive: false });  
+    if (this.state.time < 10) {
+      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 300000 }) : this.setState({ timerType: "Pomodoro", time: 1500000 });
+        } else {
+      this.setState({ time: this.initialStateTime });
+    }
   };
   handleToggleInfo = () => {
     !this.state.toggleInfo
