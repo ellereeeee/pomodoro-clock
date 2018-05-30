@@ -3,31 +3,6 @@ import './PomodoroTimer.css';
 import Info from './Info'
 
 class Timer extends Component {
-  handleIncrementTime = () => {
-    this.setState({ state: (this.state.time += 300000) });
-  };
-  handleDecrementTime = () => {
-    if (this.state.time > 300000) {
-      this.setState({ time: (this.state.time -= 300000) });
-    }
-  };
-  handleStartTimer = () => {
-    this.initialStateTime = this.state.time;
-    const startTime = Date.now();
-    this.timer = setInterval(() => {
-      if (this.state.time < 10) {
-        clearInterval(this.timer);
-      } else {
-        const lapsedTime = Date.now() - startTime;
-        this.setState({ time: this.initialStateTime - lapsedTime });
-      }
-    }, 10);
-    this.setState({ timerActive: true });
-  };
-  handleResetTimer = () => {
-    clearInterval(this.timer);
-    this.setState({ time: this.initialStateTime, timerActive: false });
-  };
   render() {
     const hours = Math.floor(this.state.time / 1000 / 60 / 60);
     const minutes = Math.floor((this.state.time / 1000 / 60) % 60);
@@ -77,6 +52,31 @@ class Timer extends Component {
 
 class PomodoroTimer extends Component {
   state = { toggleInfo: false, timerActive: false, time: 1500000 };
+  handleIncrementTime = () => {
+    this.setState({ state: (this.state.time += 300000) });
+  };
+  handleDecrementTime = () => {
+    if (this.state.time > 300000) {
+      this.setState({ time: (this.state.time -= 300000) });
+    }
+  };
+  handleStartTimer = () => {
+    this.initialStateTime = this.state.time;
+    const startTime = Date.now();
+    this.timer = setInterval(() => {
+      if (this.state.time < 10) {
+        clearInterval(this.timer);
+      } else {
+        const lapsedTime = Date.now() - startTime;
+        this.setState({ time: this.initialStateTime - lapsedTime });
+      }
+    }, 10);
+    this.setState({ timerActive: true });
+  };
+  handleResetTimer = () => {
+    clearInterval(this.timer);
+    this.setState({ time: this.initialStateTime, timerActive: false });
+  };
   handleToggleInfo = () => {
     !this.state.toggleInfo
       ? this.setState({ toggleInfo: true })
