@@ -9,6 +9,9 @@ class Timer extends Component {
     const seconds = Math.floor((this.props.time / 1000) % 60);
     return (
       <div className="timer-flex-container">
+        <svg width="12em" height="12em">
+          <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="blue" stroke-width=".2em"></circle>
+        </svg> 
         <div className="circle flex-container">
           {!this.props.timerActive ? (
             <button onClick={this.props.handleIncrementTime}>
@@ -90,7 +93,8 @@ class PomodoroTimer extends Component {
   render() {
     const Message = <h3 className="message">Focus...</h3>
     return (
-      <div className={(this.state.timerType == "Pomodoro") ? "PomodoroTimer PomodoroBackground" : "PomodoroTimer RestBackground"}> 
+      <div className={(this.state.timerType == "Pomodoro") ? "PomodoroTimer PomodoroBackground" : "PomodoroTimer RestBackground"}>
+
         <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
         <div className="flex-container">
