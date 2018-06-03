@@ -58,15 +58,6 @@
   text-align: center;
 }
 
-/* No height: 100% to properly space Message ;*/
-.timer-flex-container {
-  background-color: lightblue;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 svg {
   position: absolute;
   top: 0;

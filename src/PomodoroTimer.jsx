@@ -8,7 +8,7 @@ class Timer extends Component {
     const minutes = Math.floor((this.props.time / 1000 / 60) % 60);
     const seconds = Math.floor((this.props.time / 1000) % 60);
     return (
-      <div className="timer-flex-container">
+      <div>
         <svg width="12em" height="12em">
           <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="blue" stroke-width=".2em"></circle>
         </svg> 
