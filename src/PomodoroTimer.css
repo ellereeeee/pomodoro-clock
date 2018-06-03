@@ -30,10 +30,15 @@
 */
 
 .circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   border: .15em solid white;
   border-radius: 100%;
   height: 12em;
-  margin-top: 3em;
   width: 12em;
 }
 
@@ -55,10 +60,20 @@
 
 /* No height: 100% to properly space Message ;*/
 .timer-flex-container {
+  background-color: lightblue;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 /*
