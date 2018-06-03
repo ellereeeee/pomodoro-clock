@@ -21,6 +21,8 @@
 
 .message {
   font-size: 1.2em;
+  margin-bottom: 6em;
+  margin-top: 2em;
 }
 
 /*
@@ -54,7 +56,7 @@
 .play-reset {
   display: block;
   font-size: 3.5em;
-  margin-top: .75em;
+  margin-top: 3em;
   text-align: center;
 }
 
