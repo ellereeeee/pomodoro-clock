@@ -31,7 +31,7 @@
   ========================================
 */
 
-.circle {
+.timer {
   position: absolute;
   top: 0;
   right: 0;
@@ -44,11 +44,11 @@
   width: 12em;
 }
 
-.circle p {
+.timer p {
   font-size: 2em;
 }
 
-.circle i {
+.timer i {
   font-size: 3em;
   margin: .2em;
 }

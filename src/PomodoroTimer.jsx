@@ -12,7 +12,7 @@ class Timer extends Component {
         <svg width="12em" height="12em">
           <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="blue" stroke-width=".2em"></circle>
         </svg> 
-        <div className="circle flex-container">
+        <div className="timer flex-container">
           {!this.props.timerActive ? (
             <button onClick={this.props.handleIncrementTime}>
               <i className="material-icons">arrow_drop_up</i>
