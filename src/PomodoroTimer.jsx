@@ -10,7 +10,8 @@ class Timer extends Component {
     return (
       <div>
         <svg width="12em" height="12em">
-          <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="blue" stroke-width=".2em"></circle>
+          <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".05em"></circle>
+          <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em"></circle>
         </svg> 
         <div className="timer flex-container">
           {!this.props.timerActive ? (
