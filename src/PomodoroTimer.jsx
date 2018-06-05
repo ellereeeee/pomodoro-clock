@@ -73,6 +73,9 @@ class PomodoroTimer extends Component {
       } else {
         const lapsedTime = Date.now() - startTime;
         this.setState({ time: this.initialStateTime - lapsedTime });
+        this.setState({
+          offsetModifier: this.state.time / this.initialStateTime
+        });
       }
     }, 10);
     this.setState({ timerActive: true });
