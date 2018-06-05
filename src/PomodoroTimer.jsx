@@ -55,7 +55,7 @@ class Timer extends Component {
 }
 
 class PomodoroTimer extends Component {
-  state = { toggleInfo: false, timerActive: false, time: 1500000, timerType: "Pomodoro", progress: 0 };
+  state = { toggleInfo: false, timerActive: false, time: 1500000, timerType: "Pomodoro", offsetModifier: 1 };
   handleIncrementTime = () => {
     this.setState({ state: (this.state.time += 300000) });
   };
