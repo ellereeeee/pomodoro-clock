@@ -9,9 +9,9 @@ class Timer extends Component {
     const seconds = Math.floor((this.props.time / 1000) % 60);
     return (
       <div>
-        <svg width="20em" height="20em">
-          <circle cx="10em" cy="10em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".05em"></circle>
-          <circle className="pulse" cx="10em" cy="10em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em" stroke-dasharray="36.442em" stroke-dashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
+        <svg width="17em" height="17em" viewBox="0 0 20em 20em">
+          <circle cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".05em"></circle>
+          <circle className="pulse" cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em" stroke-dasharray="36.442em" stroke-dashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
         </svg> 
         <div className="timer flex-container">
           {!this.props.timerActive ? (
