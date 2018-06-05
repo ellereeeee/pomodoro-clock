@@ -68,7 +68,8 @@ class PomodoroTimer extends Component {
     this.initialStateTime = this.state.time;
     const startTime = Date.now();
     this.timer = setInterval(() => {
-      if (this.state.time < 10) {
+      if (this.state.time < 50) {
+        this.setState({ offsetModifier: 0 });
         clearInterval(this.timer);
       } else {
         const lapsedTime = Date.now() - startTime;
