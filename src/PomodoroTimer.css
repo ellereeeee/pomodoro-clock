@@ -69,6 +69,17 @@ svg {
 
 }
 
+@keyframes svg_pulse {
+  0% {filter: drop-shadow( 0 0 .5em #FFF );}
+  50% {filter: drop-shadow( 0 0 1.5em #FFF );}
+  100% {filter: drop-shadow( 0 0 .5em #FFF );}
+}
+
+.pulse {
+  -webkit-animation: svg_pulse 3s linear infinite;
+  animation: svg_pulse 3s linear infinite;
+}
+
 /*
   ========================================
   Media Queries
