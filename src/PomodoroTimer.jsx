@@ -11,7 +11,7 @@ class Timer extends Component {
       <div>
         <svg width="12em" height="12em">
           <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".05em"></circle>
-          <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em" stroke-dasharray="36.442em" stroke-dashoffset=""></circle>
+          <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em" stroke-dasharray="36.442em" stroke-dashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
         </svg> 
         <div className="timer flex-container">
           {!this.props.timerActive ? (
@@ -111,7 +111,8 @@ class PomodoroTimer extends Component {
             handleIncrementTime={this.handleIncrementTime}
             handleDecrementTime={this.handleDecrementTime}    
             handleStartTimer={this.handleStartTimer}
-            handleResetTimer={this.handleResetTimer}        
+            handleResetTimer={this.handleResetTimer}
+            offsetModifier={this.state.offsetModifier}        
           />
         </div>
       </div>
