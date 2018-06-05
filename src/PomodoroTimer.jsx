@@ -9,9 +9,9 @@ class Timer extends Component {
     const seconds = Math.floor((this.props.time / 1000) % 60);
     return (
       <div>
-        <svg width="12em" height="12em">
-          <circle cx="6em" cy="6em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".05em"></circle>
-          <circle className="pulse" cx="6em" cy="6em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em" stroke-dasharray="36.442em" stroke-dashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
+        <svg width="20em" height="20em">
+          <circle cx="10em" cy="10em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".05em"></circle>
+          <circle className="pulse" cx="10em" cy="10em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em" stroke-dasharray="36.442em" stroke-dashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
         </svg> 
         <div className="timer flex-container">
           {!this.props.timerActive ? (
@@ -100,7 +100,6 @@ class PomodoroTimer extends Component {
     const Message = <h3 className="message">Focus...</h3>
     return (
       <div className={(this.state.timerType == "Pomodoro") ? "PomodoroTimer PomodoroBackground" : "PomodoroTimer RestBackground"}>
-
         <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
         <div className="flex-container">
