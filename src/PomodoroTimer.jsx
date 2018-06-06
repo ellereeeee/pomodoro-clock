@@ -14,25 +14,17 @@ class Timer extends Component {
           <circle className="pulse" cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em" stroke-dasharray="36.442em" stroke-dashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
         </svg> 
         <div className="timer flex-container">
-          {!this.props.timerActive ? (
-            <button onClick={this.props.handleIncrementTime}>
-              <i className="material-icons">arrow_drop_up</i>
-            </button>
-          ) : (
-            ""
-          )}
+          <button className={!this.props.timerActive ? "" : "hide"} onClick={this.props.handleIncrementTime}>
+            <i className="material-icons">arrow_drop_up</i>
+          </button>
           <p>
             {hours ? hours + ":" : ""}
             {minutes === 0 ? "00" : minutes < 10 ? "0" + minutes : minutes}:
             {seconds === 0 ? "00" : seconds < 10 ? "0" + seconds : seconds}
           </p>
-          {!this.props.timerActive ? (
-            <button onClick={this.props.handleDecrementTime}>
-              <i className="material-icons">arrow_drop_down</i>
-            </button>
-          ) : (
-            ""
-          )}
+          <button className={!this.props.timerActive ? "" : "hide"} onClick={this.props.handleDecrementTime}>
+            <i className="material-icons">arrow_drop_down</i>
+          </button>
         </div>
         {!this.props.timerActive ? (
           <button
