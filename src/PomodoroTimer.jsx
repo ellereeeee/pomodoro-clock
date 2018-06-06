@@ -78,7 +78,7 @@ class PomodoroTimer extends Component {
     this.setState({ timerActive: false });
     this.setState({ offsetModifier: 1 });
     if (this.state.time < 50) {
-      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 300000 }) : this.setState({ timerType: "Pomodoro", time: 3000 });
+      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 300000 }) : this.setState({ timerType: "Pomodoro", time: 1500000 });
         } else {
       this.setState({ time: this.initialStateTime });
     }
