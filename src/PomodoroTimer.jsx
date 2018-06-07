@@ -89,13 +89,12 @@ class PomodoroTimer extends Component {
       : this.setState({ toggleInfo: false });
   };
   render() {
-    const Message = <h3 className="message">Focus...</h3>
     return (
       <div className={(this.state.timerType == "Pomodoro") ? "PomodoroTimer PomodoroBackground" : "PomodoroTimer RestBackground"}>
         <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
         <div className="flex-container">
-          {Message}
+          <h3 className="message">{!this.state.timerActive ? "Set a time." : (this.state.time < 50) ? "Done." : "Focus."}</h3>
           <Timer 
             timerActive={this.state.timerActive}
             time={this.state.time}
