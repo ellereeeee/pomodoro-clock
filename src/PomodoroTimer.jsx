@@ -95,7 +95,13 @@ class PomodoroTimer extends Component {
         <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
         <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
         <div className="flex-container">
-          <h3 className="message">{!this.state.timerActive ? "Set a time." : (this.state.time < 50) ? "Done." : "Focus."}</h3>
+          <CSSTransitionGroup
+            transitionName="fade"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+            {!this.state.timerActive ? <h3 className="message" key="set">Set a time.</h3> : (this.state.time < 50) ? <h3 className="message" key="done">Done.</h3> : <h3 className="message" key="focus">Focus.</h3>}
+          </CSSTransitionGroup>
           <Timer 
             timerActive={this.state.timerActive}
             time={this.state.time}
