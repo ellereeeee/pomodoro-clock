@@ -11,8 +11,8 @@ class Timer extends Component {
     return (
       <div>
         <svg width="17em" height="17em" viewBox="0 0 20em 20em">
-          <circle cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".05em"></circle>
-          <circle className="pulse" cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" stroke-width=".2em" stroke-dasharray="36.442em" stroke-dashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
+          <circle cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" strokeWidth=".05em"></circle>
+          <circle className="pulse" cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" strokeWidth=".2em" strokeDasharray="36.442em" strokeDashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
         </svg> 
         <div className="timer flex-container">
           <button className={!this.props.timerActive ? "" : "hide"} onClick={this.props.handleIncrementTime}>
