@@ -46,8 +46,11 @@
 
 .message {
   font-size: 1.2em;
-  margin-bottom: 6em;
-  margin-top: 2em;
+  position: absolute;
+  top: 18%;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 /*
