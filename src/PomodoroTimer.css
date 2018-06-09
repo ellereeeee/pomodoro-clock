@@ -92,9 +92,12 @@
 }
 
 .play-reset {
-  display: block;
   font-size: 3.5em;
-  margin-top: 6em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 13%;
+  margin: auto;
   text-align: center;
 }
 
