@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './PomodoroTimer.css';
-import Info from './Info'
+import Info from './Info';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 class Timer extends Component {
   render() {
