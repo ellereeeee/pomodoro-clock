@@ -27,21 +27,29 @@ class Timer extends Component {
             <i className="material-icons">arrow_drop_down</i>
           </button>
         </div>
-        {!this.props.timerActive ? (
-          <button
-            className="material-icons play-reset"
-            onClick={this.props.handleStartTimer}
-          >
-            <i>play_arrow</i>
-          </button>
-        ) : (
-          <button
-            className="material-icons play-reset"
-            onClick={this.props.handleResetTimer}
-          >
-            <i>close</i>
-          </button>
-        )}
+        <CSSTransitionGroup
+          transitionName="fade"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+        >
+          {!this.props.timerActive ? (
+            <button
+              className="material-icons play-reset"
+              onClick={this.props.handleStartTimer}
+              key="start"
+            >
+              <i>play_arrow</i>
+            </button>
+          ) : (
+            <button
+              className="material-icons play-reset"
+              onClick={this.props.handleResetTimer}
+              key="reset"
+            >
+              <i>close</i>
+            </button>
+          )}
+        </CSSTransitionGroup>
       </div>
     );
   }
