@@ -100,8 +100,13 @@ class PomodoroTimer extends Component {
   render() {
     return (
       <div>
-        <CSSTransitionGroup>
-          {this.state.timerType == "Pomodoro" ? <div className="PomodoroBackground" key="PomodoroBackground"></div> : <div className="RestBackground" key="RestBackground"></div>}
+        <div className="PomodoroBackground" key="PomodoroBackground"></div>
+        <CSSTransitionGroup
+          transitionName="gradientTransition"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+         >
+          {this.state.timerType == "Rest" ? <div className="RestBackground" key="RestBackground"></div> : '' }
         </CSSTransitionGroup>
         <div className="PomodoroTimer">
           <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
