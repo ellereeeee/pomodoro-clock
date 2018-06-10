@@ -56,7 +56,7 @@ class Timer extends Component {
 }
 
 class PomodoroTimer extends Component {
-  state = { toggleInfo: false, timerActive: false, time: 1500000, timerType: "Pomodoro", offsetModifier: 1 };
+  state = { toggleInfo: false, timerActive: false, time: 2000, timerType: "Pomodoro", offsetModifier: 1 };
   handleIncrementTime = () => {
     this.setState({ state: (this.state.time += 300000) });
   };
@@ -87,7 +87,7 @@ class PomodoroTimer extends Component {
     this.setState({ timerActive: false });
     this.setState({ offsetModifier: 1 });
     if (this.state.time < 50) {
-      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 300000 }) : this.setState({ timerType: "Pomodoro", time: 1500000 });
+      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 2000 }) : this.setState({ timerType: "Pomodoro", time: 2000 });
         } else {
       this.setState({ time: this.initialStateTime });
     }
@@ -99,26 +99,31 @@ class PomodoroTimer extends Component {
   };
   render() {
     return (
-      <div className="PomodoroTimer">
-        <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
-        <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
-        <div className="flex-container">
-          <CSSTransitionGroup
-            transitionName="fade"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={500}
-          >
-            {!this.state.timerActive ? <h3 className="message" key="set">Set a time.</h3> : (this.state.time < 50) ? <h3 className="message" key="done">Done.</h3> : this.state.timerType == "Rest" ? <h3 className="message" key="rest">Rest.</h3> : <h3 className="message" key="focus">Focus.</h3>}
-          </CSSTransitionGroup>
-          <Timer 
-            timerActive={this.state.timerActive}
-            time={this.state.time}
-            handleIncrementTime={this.handleIncrementTime}
-            handleDecrementTime={this.handleDecrementTime}    
-            handleStartTimer={this.handleStartTimer}
-            handleResetTimer={this.handleResetTimer}
-            offsetModifier={this.state.offsetModifier}        
-          />
+      <div>
+        <CSSTransitionGroup>
+          {this.state.timerType == "Pomodoro" ? <div className="PomodoroBackground" key="PomodoroBackground"></div> : <div className="RestBackground" key="RestBackground"></div>}
+        </CSSTransitionGroup>
+        <div className="PomodoroTimer">
+          <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
+          <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
+          <div className="flex-container">
+            <CSSTransitionGroup
+              transitionName="fade"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={500}
+            >
+              {!this.state.timerActive ? <h3 className="message" key="set">Set a time.</h3> : (this.state.time < 50) ? <h3 className="message" key="done">Done.</h3> : this.state.timerType == "Rest" ? <h3 className="message" key="rest">Rest.</h3> : <h3 className="message" key="focus">Focus.</h3>}
+            </CSSTransitionGroup>
+            <Timer 
+              timerActive={this.state.timerActive}
+              time={this.state.time}
+              handleIncrementTime={this.handleIncrementTime}
+              handleDecrementTime={this.handleDecrementTime}    
+              handleStartTimer={this.handleStartTimer}
+              handleResetTimer={this.handleResetTimer}
+              offsetModifier={this.state.offsetModifier}        
+            />
+          </div>
         </div>
       </div>
     );
