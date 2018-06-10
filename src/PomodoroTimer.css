@@ -39,7 +39,7 @@
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-out;
   transition-delay: 500ms;
 }
 
@@ -49,7 +49,7 @@
 
 .fade-leave.fade-leave-active {
   opacity: 0;
-  transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-in;
 }
 
 .gradientTransition-enter {
@@ -58,7 +58,7 @@
 
 .gradientTransition-enter.gradientTransition-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-out;
 }
 
 .gradientTransition-leave {
@@ -67,7 +67,7 @@
 
 .gradientTransition-leave.gradientTransition-leave-active {
   opacity: 0;
-  transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-in;
 }
 
 /*
