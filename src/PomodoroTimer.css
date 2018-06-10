@@ -6,11 +6,25 @@
 }
 
 .PomodoroBackground {
-  background: linear-gradient(#FAC368, #EB6C52); 
+  margin: auto;
+  background: linear-gradient(#FAC368, #EB6C52);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .RestBackground {
+  margin: auto;
   background: linear-gradient(#27AAC5, #2E58B8);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /*
@@ -158,10 +172,30 @@ svg {
     height: 80vh;
     width: 17em;
   }
+  
+  .PomodoroBackground {
+    height: 80vh;
+    width: 17em;
+  }
+  
+  .RestBackground {
+    height: 80vh;
+    width: 17em;
+  }
 }
 
 @media screen and (min-width: 1400px) {
   .PomodoroTimer {
+    height: 55vh;
+    width: 17em;
+  }
+  
+  .PomodoroBackground {
+    height: 55vh;
+    width: 17em;
+  }
+  
+  .RestBackground {
     height: 55vh;
     width: 17em;
   }
