@@ -56,7 +56,7 @@ class Timer extends Component {
 }
 
 class PomodoroTimer extends Component {
-  state = { toggleInfo: false, timerActive: false, time: 2000, timerType: "Pomodoro", offsetModifier: 1 };
+  state = { toggleInfo: false, timerActive: false, time: 1500000, timerType: "Pomodoro", offsetModifier: 1 };
   handleIncrementTime = () => {
     this.setState({ state: (this.state.time += 300000) });
   };
@@ -87,7 +87,7 @@ class PomodoroTimer extends Component {
     this.setState({ timerActive: false });
     this.setState({ offsetModifier: 1 });
     if (this.state.time < 50) {
-      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 2000 }) : this.setState({ timerType: "Pomodoro", time: 2000 });
+      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 300000 }) : this.setState({ timerType: "Pomodoro", time: 1500000 });
         } else {
       this.setState({ time: this.initialStateTime });
     }
