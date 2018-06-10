@@ -108,7 +108,7 @@ class PomodoroTimer extends Component {
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
           >
-            {!this.state.timerActive ? <h3 className="message" key="set">Set a time.</h3> : (this.state.time < 50) ? <h3 className="message" key="done">Done.</h3> : <h3 className="message" key="focus">Focus.</h3>}
+            {!this.state.timerActive ? <h3 className="message" key="set">Set a time.</h3> : (this.state.time < 50) ? <h3 className="message" key="done">Done.</h3> : this.state.timerType == "Rest" ? <h3 className="message" key="rest">Rest.</h3> : <h3 className="message" key="focus">Focus.</h3>}
           </CSSTransitionGroup>
           <Timer 
             timerActive={this.state.timerActive}
