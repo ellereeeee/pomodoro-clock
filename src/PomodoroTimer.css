@@ -38,6 +38,24 @@
   transition: opacity 500ms ease-out;
 }
 
+.gradientTransition-enter {
+  opacity: 0;
+}
+
+.gradientTransition-enter.gradientTransition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.gradientTransition-leave {
+  opacity: 1;
+}
+
+.gradientTransition-leave.gradientTransition-leave-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
 /*
   ========================================
   Message Styles
