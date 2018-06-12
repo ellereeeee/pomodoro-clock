@@ -111,18 +111,6 @@
   margin: .2em;
 }
 
-.timer button {
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.hide {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .play-reset {
   font-size: 3.5em;
   width: 100%;
