@@ -26,11 +26,14 @@ class Timer extends Component {
              </button>
            ) : ''}
           </CSSTransitionGroup>
-          <p>
-            {hours ? hours + ":" : ""}
-            {minutes === 0 ? "00" : minutes < 10 ? "0" + minutes : minutes}:
-            {seconds === 0 ? "00" : seconds < 10 ? "0" + seconds : seconds}
-          </p>
+          {this.props.time > 0 ? 
+            <p>
+              {hours ? hours + ":" : ""}
+              {minutes === 0 ? "00" : minutes < 10 ? "0" + minutes : minutes}:
+              {seconds === 0 ? "00" : seconds < 10 ? "0" + seconds : seconds}
+            </p> :
+            <p>00:00</p>
+          }
           <CSSTransitionGroup
            transitionName="fade"
            transitionEnterTimeout={1000}
@@ -85,7 +88,7 @@ class PomodoroTimer extends Component {
     this.initialStateTime = this.state.time;
     const startTime = Date.now();
     this.timer = setInterval(() => {
-      if (this.state.time < 50) {
+      if (this.state.time <= 0) {
         this.setState({ offsetModifier: 0 });
         clearInterval(this.timer);
       } else {
