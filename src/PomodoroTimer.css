@@ -58,7 +58,7 @@
 
 .gradientTransition-enter.gradientTransition-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-out;
+  transition: opacity 1000ms ease-out;
 }
 
 .gradientTransition-leave {
