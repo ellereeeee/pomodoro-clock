@@ -29,7 +29,7 @@ class Timer extends Component {
         </div>
         <CSSTransitionGroup
           transitionName="fade"
-          transitionEnterTimeout={500}
+          transitionEnterTimeout={1000}
           transitionLeaveTimeout={500}
         >
           {!this.props.timerActive ? (
@@ -114,7 +114,7 @@ class PomodoroTimer extends Component {
           <div className="flex-container">
             <CSSTransitionGroup
               transitionName="fade"
-              transitionEnterTimeout={500}
+              transitionEnterTimeout={1000}
               transitionLeaveTimeout={500}
             >
               {!this.state.timerActive ? <h3 className="message" key="set">Set a time.</h3> : (this.state.time < 50) ? <h3 className="message" key="done">Done.</h3> : this.state.timerType == "Rest" ? <h3 className="message" key="rest">Rest.</h3> : <h3 className="message" key="focus">Focus.</h3>}
