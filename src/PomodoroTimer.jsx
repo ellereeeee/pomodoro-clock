@@ -15,17 +15,33 @@ class Timer extends Component {
           <circle className="pulse" cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" strokeWidth=".2em" strokeDasharray="36.442em" strokeDashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
         </svg> 
         <div className="timer flex-container">
-          <button className={!this.props.timerActive ? "" : "hide"} onClick={this.props.handleIncrementTime}>
-            <i className="material-icons">arrow_drop_up</i>
-          </button>
+          <CSSTransitionGroup
+           transitionName="fade"
+           transitionEnterTimeout={1000}
+           transitionLeaveTimeout={500}
+          >
+           {!this.props.timerActive ? (
+             <button key="increment" onClick={this.props.handleIncrementTime}>
+               <i className="material-icons">arrow_drop_up</i>
+             </button>
+           ) : ''}
+          </CSSTransitionGroup>
           <p>
             {hours ? hours + ":" : ""}
             {minutes === 0 ? "00" : minutes < 10 ? "0" + minutes : minutes}:
             {seconds === 0 ? "00" : seconds < 10 ? "0" + seconds : seconds}
           </p>
-          <button className={!this.props.timerActive ? "" : "hide"} onClick={this.props.handleDecrementTime}>
-            <i className="material-icons">arrow_drop_down</i>
-          </button>
+          <CSSTransitionGroup
+           transitionName="fade"
+           transitionEnterTimeout={1000}
+           transitionLeaveTimeout={500}
+          >
+           {!this.props.timerActive ? (
+             <button key="decrement" onClick={this.props.handleDecrementTime}>
+               <i className="material-icons">arrow_drop_down</i>
+             </button>
+           ) : ''}
+          </CSSTransitionGroup>
         </div>
         <CSSTransitionGroup
           transitionName="fade"
@@ -56,7 +72,7 @@ class Timer extends Component {
 }
 
 class PomodoroTimer extends Component {
-  state = { toggleInfo: false, timerActive: false, time: 1500000, timerType: "Pomodoro", offsetModifier: 1 };
+  state = { toggleInfo: false, timerActive: false, time: 3000, timerType: "Pomodoro", offsetModifier: 1 };
   handleIncrementTime = () => {
     this.setState({ state: (this.state.time += 300000) });
   };
@@ -87,7 +103,7 @@ class PomodoroTimer extends Component {
     this.setState({ timerActive: false });
     this.setState({ offsetModifier: 1 });
     if (this.state.time < 50) {
-      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 300000 }) : this.setState({ timerType: "Pomodoro", time: 1500000 });
+      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 3000 }) : this.setState({ timerType: "Pomodoro", time: 3000 });
         } else {
       this.setState({ time: this.initialStateTime });
     }
