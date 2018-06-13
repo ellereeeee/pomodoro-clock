@@ -141,6 +141,7 @@ a {
 }
 
 .signature {
+  display: none;
   color: #FFF;
   text-align: center;
   position: absolute;
@@ -163,5 +164,9 @@ a {
     background-color: #57EFB8;
     display: flex;
     justify-content: center;
+  }
+  
+  .signature {
+    display: block;
   }
 }
