@@ -12,8 +12,10 @@ class Timer extends Component {
       <div>
         <svg width="17em" height="17em" viewBox="0 0 20em 20em">
           <circle cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" strokeWidth=".05em"></circle>
-          <circle className="pulse" cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" strokeWidth=".2em" strokeDasharray="36.442em" strokeDashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
-        </svg> 
+        </svg>
+        <svg className="pulse" width="17em" height="17em" viewBox="0 0 20em 20em">
+          <circle cx="8.5em" cy="8.5em" r="5.8em" fill="none" stroke="#FFF" strokeWidth=".2em" strokeDasharray="36.442em" strokeDashoffset={36.442 * this.props.offsetModifier + "em"}></circle>
+        </svg>
         <div className="timer flex-container">
           <CSSTransitionGroup
            transitionName="fade"
