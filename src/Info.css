@@ -67,28 +67,7 @@
 
 @media screen and (min-width: 1000px) {
   .info {
-    height: 77.6vh;
+    height: 32.15em;
     width: 16.15em;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .info {
-    height: 53.35vh;
-    width: 16.15em;
-    padding: 2em 1em 1em 1em;
-  }
-  
-  .info p {
-    line-height: 1.3em;
-  }
-
-  .info h3 {
-    margin-top: .7em;
-    text-align: center;
-  }
-
-  .info div {
-    margin-bottom: 0em;
   }
 }
