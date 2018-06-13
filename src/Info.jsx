@@ -6,7 +6,7 @@ class Info extends Component {
     return (
       <div className={this.props.visibility ? "info show" : "info"}>
         <button className="material-icons topright" onClick={this.props.toggle}><i>close</i></button>
-        <p>This is a <a href="https://francescocirillo.com/pages/pomodoro-technique" target="_blank">pomodoro clock</a> application, or a productivity timer. Work for 25 minutes then take a break for 5 minutes. Repeat 3 more times for a total of 2 hours, then take a 15 minute break. Repeat the whole cycle.</p>
+        <p>This is a <a href="https://francescocirillo.com/pages/pomodoro-technique" target="_blank">pomodoro clock</a> application, or a productivity timer. Work for 25 minutes then rest for 5 minutes. Repeat 3 more times for a total of 2 hours, then take a 15 minute break. Repeat the whole cycle.</p>
         <h3>Buttons:</h3>
         <div className="info-flex-container">
           <i className="material-icons">play_arrow</i><p className="same-line">start timer</p>
