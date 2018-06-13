@@ -104,11 +104,12 @@
 
 .timer p {
   font-size: 2em;
+  position: absolute;
 }
 
 .timer i {
   font-size: 3em;
-  margin: .2em;
+  margin: .6em;
 }
 
 .play-reset {
