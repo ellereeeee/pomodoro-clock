@@ -23,7 +23,7 @@ class Timer extends Component {
            transitionLeaveTimeout={500}
           >
            {!this.props.timerActive ? (
-             <button key="increment" onClick={this.props.handleIncrementTime}>
+             <button className="dropUp" key="increment" onClick={this.props.handleIncrementTime}>
                <i className="material-icons">arrow_drop_up</i>
              </button>
            ) : ''}
@@ -42,7 +42,7 @@ class Timer extends Component {
            transitionLeaveTimeout={500}
           >
            {!this.props.timerActive ? (
-             <button key="decrement" onClick={this.props.handleDecrementTime}>
+             <button className="dropDown" key="decrement" onClick={this.props.handleDecrementTime}>
                <i className="material-icons">arrow_drop_down</i>
              </button>
            ) : ''}
