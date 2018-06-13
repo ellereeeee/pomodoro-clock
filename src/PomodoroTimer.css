@@ -176,34 +176,17 @@ svg {
 
 @media screen and (min-width: 1000px) {
   .PomodoroTimer {
-    height: 80vh;
+    height: 33em;
     width: 17em;
   }
   
   .PomodoroBackground {
-    height: 80vh;
+    height: 33em;
     width: 17em;
   }
   
   .RestBackground {
-    height: 80vh;
-    width: 17em;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .PomodoroTimer {
-    height: 55vh;
-    width: 17em;
-  }
-  
-  .PomodoroBackground {
-    height: 55vh;
-    width: 17em;
-  }
-  
-  .RestBackground {
-    height: 55vh;
+    height: 33em;
     width: 17em;
   }
 }
