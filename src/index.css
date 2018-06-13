@@ -140,6 +140,17 @@ a {
   left: .5em;
 }
 
+.signature {
+  color: #FFF;
+  text-align: center;
+  position: absolute;
+  top: 96%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
 /*
   ========================================
   Media Queries
