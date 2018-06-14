@@ -94,8 +94,10 @@ class PomodoroTimer extends Component {
       if (this.state.time <= 0) {
         this.setState({ offsetModifier: 0 });
         clearInterval(this.timer);
-        var text = this.state.timerType == "Pomodoro" ? "Take a break." : "Time to work.";
-        new Notification('Finished!', {body: text, icon: icon});
+        if ("Notification" in window) {
+          var text = this.state.timerType == "Pomodoro" ? "Take a break." : "Time to work.";
+          new Notification('Finished!', {body: text, icon: icon});
+        }
       } else {
         const lapsedTime = Date.now() - startTime;
         this.setState({ time: this.initialStateTime - lapsedTime });
@@ -122,10 +124,7 @@ class PomodoroTimer extends Component {
       : this.setState({ toggleInfo: false });
   };
   render() {
-    if (!("Notification" in window)) {
-      alert("This browser does not support system notifications");
-    }
-    else if (Notification.permission !== 'denied') {
+    if ("Notification" in window && Notification.permission !== 'denied') {
       Notification.requestPermission();
     }
     return (
