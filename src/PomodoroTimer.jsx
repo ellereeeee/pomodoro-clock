@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './PomodoroTimer.css';
 import Info from './Info';
 import { CSSTransitionGroup } from 'react-transition-group';
+import icon from './alarm_on.png';
 
 class Timer extends Component {
   render() {
@@ -93,6 +94,8 @@ class PomodoroTimer extends Component {
       if (this.state.time <= 0) {
         this.setState({ offsetModifier: 0 });
         clearInterval(this.timer);
+        var text = this.state.timerType == "Pomodoro" ? "Take a break." : "Time to work.";
+        new Notification('Finished!', {body: text, icon: icon});
       } else {
         const lapsedTime = Date.now() - startTime;
         this.setState({ time: this.initialStateTime - lapsedTime });
