@@ -131,13 +131,10 @@
 
 .play-reset {
   font-size: 3.5em;
-  width: 100%;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 13%;
-  margin: auto;
-  text-align: center;
 }
 
 svg {
