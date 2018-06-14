@@ -119,6 +119,12 @@ class PomodoroTimer extends Component {
       : this.setState({ toggleInfo: false });
   };
   render() {
+    if (!("Notification" in window)) {
+      alert("This browser does not support system notifications");
+    }
+    else if (Notification.permission !== 'denied') {
+      Notification.requestPermission();
+    }
     return (
       <div>
         <div className="PomodoroBackground" key="PomodoroBackground"></div>
