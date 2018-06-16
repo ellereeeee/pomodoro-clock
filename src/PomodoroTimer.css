@@ -108,25 +108,23 @@
 
 .timer i {
   font-size: 3em;
-  margin: .2em;
 }
 
 .timer button {
-  width: 100%;
   position: absolute;
-  right: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin: auto;
 }
 
 .dropUp {
-  bottom: 40%;
-  top: 0;
+  bottom: 60;
+  top: 20%;
 }
 
 .dropDown {
-  bottom: 0;
-  top: 40%;
+  bottom: 20%;
+  top: 60%;
 }
 
 .play-reset {
