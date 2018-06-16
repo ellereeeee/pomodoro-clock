@@ -118,13 +118,13 @@
 }
 
 .dropUp {
-  bottom: 60;
-  top: 20%;
+  bottom: 65%;
+  top: 15%;
 }
 
 .dropDown {
-  bottom: 20%;
-  top: 60%;
+  bottom: 15%;
+  top: 65%;
 }
 
 .play-reset {
