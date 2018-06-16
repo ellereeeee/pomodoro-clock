@@ -99,13 +99,13 @@ button {
 
 body {
   font-family: 'Lato', sans-serif;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 html, body {
   height: 100%;
   margin: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 *,
