@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './PomodoroTimer.css';
 import Info from './Info';
+import Title from './Title';
 import { CSSTransitionGroup } from 'react-transition-group';
 import icon from './alarm_on.png';
 
@@ -129,6 +130,9 @@ class PomodoroTimer extends Component {
     }
     return (
       <div>
+        <Title
+          time={this.state.time}
+        />
         <div className="PomodoroBackground" key="PomodoroBackground"></div>
         <CSSTransitionGroup
           transitionName="gradientTransition"
