@@ -9,7 +9,7 @@
   margin: auto;
   background: linear-gradient(#FAC368, #EB6C52);
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -20,7 +20,7 @@
   margin: auto;
   background: linear-gradient(#27AAC5, #2E58B8);
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
