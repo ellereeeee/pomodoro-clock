@@ -57,7 +57,7 @@ class PomodoroTimer extends Component {
     }
     return (
       <div>
-        <div className="PomodoroBackground" key="PomodoroBackground"></div>
+        <div className="PomodoroBackground"></div>
         <CSSTransitionGroup
           transitionName="gradientTransition"
           transitionEnterTimeout={1000}
