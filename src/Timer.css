@@ -1,0 +1,71 @@
+.timer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 12em;
+  width: 12em;
+}
+
+.timer p {
+  font-size: 2em;
+}
+
+.timer i {
+  font-size: 3em;
+}
+
+.timer button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+}
+
+.dropUp {
+  bottom: 65%;
+  top: 15%;
+}
+
+.dropDown {
+  bottom: 15%;
+  top: 65%;
+}
+
+.play-reset {
+  font-size: 3.5em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 13%;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transform: rotate(-90deg);
+
+}
+
+@-webkit-keyframes svg_pulse {
+  0% {filter: drop-shadow( 0 0 .5em #FFF );}
+  50% {filter: drop-shadow( 0 0 1.5em #FFF );}
+  100% {filter: drop-shadow( 0 0 .5em #FFF );}
+}
+
+@keyframes svg_pulse {
+  0% {filter: drop-shadow( 0 0 .5em #FFF );}
+  50% {filter: drop-shadow( 0 0 1.5em #FFF );}
+  100% {filter: drop-shadow( 0 0 .5em #FFF );}
+}
+
+.pulse {
+  -webkit-animation: svg_pulse 3s linear infinite;
+  animation: svg_pulse 3s linear infinite;
+}
