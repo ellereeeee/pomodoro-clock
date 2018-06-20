@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './PomodoroTimer.css';
 import Info from './Info';
 import { CSSTransitionGroup } from 'react-transition-group';
-import icon from './alarm_on.png';
+import icon from '../assets/alarm_on.png';
 import Timer from './Timer';
 
 class PomodoroTimer extends Component {
