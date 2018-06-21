@@ -68,7 +68,10 @@ class PomodoroTimer extends Component {
     }
     return (
       <div>
+        {/* Use two separate backgrounds to transition color 
+            via opacity because gradients are not animatable. */}
         <div className="PomodoroBackground" />
+        {/* CSSTransitionGroup applies fade to mounting and unmounting elements. */}
         <CSSTransitionGroup
           transitionName="gradientTransition"
           transitionEnterTimeout={1000}
@@ -115,6 +118,8 @@ class PomodoroTimer extends Component {
                 </h3>
               )}
             </CSSTransitionGroup>
+            {/* offsetModifier state updates the radial 
+                timer based on remaining time. */}
             <Timer
               timerActive={this.state.timerActive}
               time={this.state.time}
