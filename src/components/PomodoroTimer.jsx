@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
-import './PomodoroTimer.css';
-import Info from './Info';
-import { CSSTransitionGroup } from 'react-transition-group';
-import icon from '../assets/alarm_on.png';
-import Timer from './Timer';
+import React, { Component } from "react";
+import "./PomodoroTimer.css";
+import Info from "./Info";
+import { CSSTransitionGroup } from "react-transition-group";
+import icon from "../assets/alarm_on.png";
+import Timer from "./Timer";
 
 class PomodoroTimer extends Component {
-  state = { toggleInfo: false, timerActive: false, time: 1500000, timerType: "Pomodoro", offsetModifier: 1 };
+  state = {
+    toggleInfo: false,
+    timerActive: false,
+    time: 1500000,
+    timerType: "Pomodoro",
+    offsetModifier: 1
+  };
   handleIncrementTime = () => {
     this.setState({ state: (this.state.time += 300000) });
   };
@@ -23,8 +29,11 @@ class PomodoroTimer extends Component {
         this.setState({ offsetModifier: 0 });
         clearInterval(this.timer);
         if ("Notification" in window) {
-          var text = this.state.timerType == "Pomodoro" ? "Take a break." : "Time to work.";
-          new Notification('Finished!', {body: text, icon: icon});
+          var text =
+            this.state.timerType == "Pomodoro"
+              ? "Take a break."
+              : "Time to work.";
+          new Notification("Finished!", { body: text, icon: icon });
         }
       } else {
         const lapsedTime = Date.now() - startTime;
@@ -41,8 +50,10 @@ class PomodoroTimer extends Component {
     this.setState({ timerActive: false });
     this.setState({ offsetModifier: 1 });
     if (this.state.time < 50) {
-      (this.state.timerType == "Pomodoro") ? this.setState({ timerType: "Rest", time: 300000 }) : this.setState({ timerType: "Pomodoro", time: 1500000 });
-        } else {
+      this.state.timerType == "Pomodoro"
+        ? this.setState({ timerType: "Rest", time: 300000 })
+        : this.setState({ timerType: "Pomodoro", time: 1500000 });
+    } else {
       this.setState({ time: this.initialStateTime });
     }
   };
@@ -52,38 +63,66 @@ class PomodoroTimer extends Component {
       : this.setState({ toggleInfo: false });
   };
   render() {
-    if ("Notification" in window && Notification.permission !== 'denied') {
+    if ("Notification" in window && Notification.permission !== "denied") {
       Notification.requestPermission();
     }
     return (
       <div>
-        <div className="PomodoroBackground"></div>
+        <div className="PomodoroBackground" />
         <CSSTransitionGroup
           transitionName="gradientTransition"
           transitionEnterTimeout={1000}
           transitionLeaveTimeout={500}
-         >
-          {this.state.timerType == "Rest" ? <div className="RestBackground" key="RestBackground"></div> : '' }
+        >
+          {this.state.timerType == "Rest" ? (
+            <div className="RestBackground" key="RestBackground" />
+          ) : (
+            ""
+          )}
         </CSSTransitionGroup>
         <div className="PomodoroTimer">
-          <Info visibility={this.state.toggleInfo} toggle={this.handleToggleInfo}/>
-          <button className="material-icons topleft" onClick={this.handleToggleInfo}><i>info_outline</i></button>
+          <Info
+            visibility={this.state.toggleInfo}
+            toggle={this.handleToggleInfo}
+          />
+          <button
+            className="material-icons topleft"
+            onClick={this.handleToggleInfo}
+          >
+            <i>info_outline</i>
+          </button>
           <div className="flex-container">
             <CSSTransitionGroup
               transitionName="fade"
               transitionEnterTimeout={1000}
               transitionLeaveTimeout={500}
             >
-              {!this.state.timerActive ? <h3 className="message" key="set">Set a time.</h3> : (this.state.time < 50) ? <h3 className="message" key="done">Done.</h3> : this.state.timerType == "Rest" ? <h3 className="message" key="rest">Rest.</h3> : <h3 className="message" key="focus">Focus.</h3>}
+              {!this.state.timerActive ? (
+                <h3 className="message" key="set">
+                  Set a time.
+                </h3>
+              ) : this.state.time < 50 ? (
+                <h3 className="message" key="done">
+                  Done.
+                </h3>
+              ) : this.state.timerType == "Rest" ? (
+                <h3 className="message" key="rest">
+                  Rest.
+                </h3>
+              ) : (
+                <h3 className="message" key="focus">
+                  Focus.
+                </h3>
+              )}
             </CSSTransitionGroup>
-            <Timer 
+            <Timer
               timerActive={this.state.timerActive}
               time={this.state.time}
               handleIncrementTime={this.handleIncrementTime}
-              handleDecrementTime={this.handleDecrementTime}    
+              handleDecrementTime={this.handleDecrementTime}
               handleStartTimer={this.handleStartTimer}
               handleResetTimer={this.handleResetTimer}
-              offsetModifier={this.state.offsetModifier}        
+              offsetModifier={this.state.offsetModifier}
             />
           </div>
         </div>
