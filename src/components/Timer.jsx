@@ -9,6 +9,7 @@ class Timer extends Component {
     const seconds = Math.floor((this.props.time / 1000) % 60);
     return (
       <div>
+        {/* static circle SVG */}
         <svg width="17em" height="17em" viewBox="0 0 20em 20em">
           <circle
             cx="8.5em"
@@ -19,6 +20,7 @@ class Timer extends Component {
             strokeWidth=".05em"
           />
         </svg>
+        {/* stateful circle SVG based on time */}
         <svg
           className="pulse"
           width="17em"
@@ -37,6 +39,7 @@ class Timer extends Component {
           />
         </svg>
         <div className="timer flex-container">
+          {/* CSSTransitionGroup applies fade to mounting and unmounting elements. */}
           <CSSTransitionGroup
             transitionName="fade"
             transitionEnterTimeout={1000}
