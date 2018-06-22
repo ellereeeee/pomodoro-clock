@@ -60,6 +60,7 @@ class PomodoroTimer extends Component {
     this.setState({ toggleInfo: !this.state.toggleInfo });
   };
   render() {
+    const { timerType, toggleInfo, timerActive, time, offsetModifier } = this.state;
     if ("Notification" in window && Notification.permission !== "denied") {
       Notification.requestPermission();
     }
@@ -74,7 +75,7 @@ class PomodoroTimer extends Component {
           transitionEnterTimeout={1000}
           transitionLeaveTimeout={500}
         >
-          {this.state.timerType == "Rest" ? (
+          {timerType == "Rest" ? (
             <div className="RestBackground" key="RestBackground" />
           ) : (
             ""
@@ -82,7 +83,7 @@ class PomodoroTimer extends Component {
         </CSSTransitionGroup>
         <div className="PomodoroTimer">
           <Info
-            visibility={this.state.toggleInfo}
+            visibility={toggleInfo}
             toggle={this.handleToggleInfo}
           />
           <button
@@ -97,15 +98,15 @@ class PomodoroTimer extends Component {
               transitionEnterTimeout={1000}
               transitionLeaveTimeout={500}
             >
-              {!this.state.timerActive ? (
+              {!timerActive ? (
                 <h3 className="message" key="set">
                   Set a time.
                 </h3>
-              ) : this.state.time < 50 ? (
+              ) : time < 50 ? (
                 <h3 className="message" key="done">
                   Done.
                 </h3>
-              ) : this.state.timerType == "Rest" ? (
+              ) : timerType == "Rest" ? (
                 <h3 className="message" key="rest">
                   Rest.
                 </h3>
@@ -118,13 +119,13 @@ class PomodoroTimer extends Component {
             {/* offsetModifier state updates the radial 
                 timer based on remaining time. */}
             <Timer
-              timerActive={this.state.timerActive}
-              time={this.state.time}
+              timerActive={timerActive}
+              time={time}
               handleIncrementTime={this.handleIncrementTime}
               handleDecrementTime={this.handleDecrementTime}
               handleStartTimer={this.handleStartTimer}
               handleResetTimer={this.handleResetTimer}
-              offsetModifier={this.state.offsetModifier}
+              offsetModifier={offsetModifier}
             />
           </div>
         </div>
