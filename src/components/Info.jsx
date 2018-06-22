@@ -3,9 +3,10 @@ import "./Info.css";
 
 class Info extends Component {
   render() {
+    const { visibility, toggle } = this.props;
     return (
-      <div className={this.props.visibility ? "info show" : "info"}>
-        <button className="material-icons topright" onClick={this.props.toggle}>
+      <div className={visibility ? "info show" : "info"}>
+        <button className="material-icons topright" onClick={toggle}>
           <i>close</i>
         </button>
         <p>
