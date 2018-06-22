@@ -4,9 +4,18 @@ import { CSSTransitionGroup } from "react-transition-group";
 
 class Timer extends Component {
   render() {
-    const hours = Math.floor(this.props.time / 1000 / 60 / 60);
-    const minutes = Math.floor((this.props.time / 1000 / 60) % 60);
-    const seconds = Math.floor((this.props.time / 1000) % 60);
+    const {
+      time,
+      offsetModifier,
+      timerActive,
+      handleIncrementTime,
+      handleDecrementTime,
+      handleStartTimer,
+      handleResetTimer
+    } = this.props;
+    const hours = Math.floor(time / 1000 / 60 / 60);
+    const minutes = Math.floor((time / 1000 / 60) % 60);
+    const seconds = Math.floor((time / 1000) % 60);
     return (
       <div>
         {/* static circle SVG */}
@@ -35,7 +44,7 @@ class Timer extends Component {
             stroke="#FFF"
             strokeWidth=".2em"
             strokeDasharray="36.442em"
-            strokeDashoffset={36.442 * this.props.offsetModifier + "em"}
+            strokeDashoffset={36.442 * offsetModifier + "em"}
           />
         </svg>
         <div className="timer flex-container">
@@ -45,11 +54,11 @@ class Timer extends Component {
             transitionEnterTimeout={1000}
             transitionLeaveTimeout={500}
           >
-            {!this.props.timerActive ? (
+            {!timerActive ? (
               <button
                 className="dropUp"
                 key="increment"
-                onClick={this.props.handleIncrementTime}
+                onClick={handleIncrementTime}
               >
                 <i className="material-icons">arrow_drop_up</i>
               </button>
@@ -57,7 +66,7 @@ class Timer extends Component {
               ""
             )}
           </CSSTransitionGroup>
-          {this.props.time > 0 ? (
+          {time > 0 ? (
             <p>
               {hours ? hours + ":" : ""}
               {minutes === 0 ? "00" : minutes < 10 ? "0" + minutes : minutes}:
@@ -71,11 +80,11 @@ class Timer extends Component {
             transitionEnterTimeout={1000}
             transitionLeaveTimeout={500}
           >
-            {!this.props.timerActive ? (
+            {!timerActive ? (
               <button
                 className="dropDown"
                 key="decrement"
-                onClick={this.props.handleDecrementTime}
+                onClick={handleDecrementTime}
               >
                 <i className="material-icons">arrow_drop_down</i>
               </button>
@@ -89,10 +98,10 @@ class Timer extends Component {
           transitionEnterTimeout={1000}
           transitionLeaveTimeout={500}
         >
-          {!this.props.timerActive ? (
+          {!timerActive ? (
             <button
               className="material-icons play-reset"
-              onClick={this.props.handleStartTimer}
+              onClick={handleStartTimer}
               key="start"
             >
               <i>play_arrow</i>
@@ -100,7 +109,7 @@ class Timer extends Component {
           ) : (
             <button
               className="material-icons play-reset"
-              onClick={this.props.handleResetTimer}
+              onClick={handleResetTimer}
               key="reset"
             >
               <i>close</i>
