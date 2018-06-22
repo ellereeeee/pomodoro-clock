@@ -57,9 +57,7 @@ class PomodoroTimer extends Component {
     }
   };
   handleToggleInfo = () => {
-    !this.state.toggleInfo
-      ? this.setState({ toggleInfo: true })
-      : this.setState({ toggleInfo: false });
+    this.setState({ toggleInfo: !this.state.toggleInfo });
   };
   render() {
     if ("Notification" in window && Notification.permission !== "denied") {
