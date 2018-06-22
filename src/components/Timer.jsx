@@ -80,7 +80,7 @@ class Timer extends Component {
             transitionEnterTimeout={1000}
             transitionLeaveTimeout={500}
           >
-            {!timerActive ? (
+            {!timerActive && time > 300000 ? (
               <button
                 className="dropDown"
                 key="decrement"
