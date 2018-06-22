@@ -37,8 +37,8 @@ class PomodoroTimer extends Component {
         }
       } else {
         const lapsedTime = Date.now() - startTime;
-        this.setState({ time: this.initialStateTime - lapsedTime });
         this.setState({
+          time: this.initialStateTime - lapsedTime,
           offsetModifier: this.state.time / this.initialStateTime
         });
       }
@@ -47,8 +47,7 @@ class PomodoroTimer extends Component {
   };
   handleResetTimer = () => {
     clearInterval(this.timer);
-    this.setState({ timerActive: false });
-    this.setState({ offsetModifier: 1 });
+    this.setState({ timerActive: false, offsetModifier: 1 });
     if (this.state.time < 50) {
       this.state.timerType == "Pomodoro"
         ? this.setState({ timerType: "Rest", time: 300000 })
