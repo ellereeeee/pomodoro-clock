@@ -2,6 +2,8 @@
 
 This is a [pomodoro](https://francescocirillo.com/pages/pomodoro-technique) clock application, or a productivity timer. 
 
+Check it out 👉[here](https://ellereeeee-pomodoro-clock.netlify.com/).
+
 ## Motivation
 
 I created this for the freeCodeCamp [Pomodoro Clock assignment](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-pomodoro-clock) and to practice coding in React. This is my first application written entirely by myself in React.
