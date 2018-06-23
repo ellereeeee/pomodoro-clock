@@ -13,12 +13,11 @@ class PomodoroTimer extends Component {
     timerType: "Pomodoro",
     offsetModifier: 1
   };
-  handleIncrementTime = () => {
-    this.setState({ state: (this.state.time += 300000) });
-  };
+  handleIncrementTime = () =>
+    this.setState(prevState => ({ time: (prevState.time += 300000) }));
   handleDecrementTime = () => {
     if (this.state.time > 300000) {
-      this.setState({ time: (this.state.time -= 300000) });
+      this.setState(prevState => ({ time: (prevState.time -= 300000) }));
     }
   };
   handleStartTimer = () => {
