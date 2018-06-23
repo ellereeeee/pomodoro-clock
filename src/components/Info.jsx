@@ -14,6 +14,7 @@ class Info extends Component {
           <a
             href="https://francescocirillo.com/pages/pomodoro-technique"
             target="_blank"
+            rel="noopener noreferrer"
           >
             pomodoro clock
           </a>{" "}
