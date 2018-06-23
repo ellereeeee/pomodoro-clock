@@ -30,7 +30,7 @@ class PomodoroTimer extends Component {
         clearInterval(this.timer);
         if ("Notification" in window) {
           var text =
-            this.state.timerType == "Pomodoro"
+            this.state.timerType === "Pomodoro"
               ? "Take a break."
               : "Time to work.";
           new Notification("Finished!", { body: text, icon: icon });
@@ -49,7 +49,7 @@ class PomodoroTimer extends Component {
     clearInterval(this.timer);
     this.setState({ timerActive: false, offsetModifier: 1 });
     if (this.state.time < 50) {
-      this.state.timerType == "Pomodoro"
+      this.state.timerType === "Pomodoro"
         ? this.setState({ timerType: "Rest", time: 300000 })
         : this.setState({ timerType: "Pomodoro", time: 1500000 });
     } else {
@@ -75,7 +75,7 @@ class PomodoroTimer extends Component {
           transitionEnterTimeout={1000}
           transitionLeaveTimeout={500}
         >
-          {timerType == "Rest" ? (
+          {timerType === "Rest" ? (
             <div className="RestBackground" key="RestBackground" />
           ) : (
             ""
@@ -106,7 +106,7 @@ class PomodoroTimer extends Component {
                 <h3 className="message" key="done">
                   Done.
                 </h3>
-              ) : timerType == "Rest" ? (
+              ) : timerType === "Rest" ? (
                 <h3 className="message" key="rest">
                   Rest.
                 </h3>
