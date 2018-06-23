@@ -19,7 +19,7 @@ class Timer extends Component {
     return (
       <div>
         {/* static circle SVG */}
-        <svg width="17em" height="17em" viewBox="0 0 20em 20em">
+        <svg width="17em" height="17em">
           <circle
             cx="8.5em"
             cy="8.5em"
@@ -34,7 +34,6 @@ class Timer extends Component {
           className="pulse"
           width="17em"
           height="17em"
-          viewBox="0 0 20em 20em"
         >
           <circle
             cx="8.5em"
