@@ -4,6 +4,8 @@ This is a [pomodoro](https://francescocirillo.com/pages/pomodoro-technique) cloc
 
 Check it out 👉[here](https://ellereeeee-pomodoro-clock.netlify.com/).
 
+I wrote about some lessons I learned from coding this application on [Medium ](https://medium.com/@ellereeeee/lessons-learned-from-my-first-react-app-3c4ebb740399).
+
 ## Motivation
 
 I created this for the freeCodeCamp [Pomodoro Clock assignment](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-pomodoro-clock) and to practice coding in React. This is my first application written entirely by myself in React.
