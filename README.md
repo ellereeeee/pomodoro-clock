@@ -4,6 +4,8 @@ This is a [pomodoro](https://francescocirillo.com/pages/pomodoro-technique) cloc
 
 Check it out 👉[here](https://ellereeeee-pomodoro-clock.netlify.com/).
 
+The design is inspired by Johan Cutych's Workflow POMODORO App design on [dribbble](https://dribbble.com/shots/1886028-Workflow-POMODORO-App).
+
 I wrote about some lessons I learned from coding this application on [Medium ](https://medium.com/@ellereeeee/lessons-learned-from-my-first-react-app-3c4ebb740399).
 
 ## Motivation
